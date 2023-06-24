@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,8 +22,8 @@
     <ul>
         <c:forEach var="comment" items="${comments}">
             <li>
-                <p>댓글 내용: ${comment.commentText}</p>
-                <p>작성자: ${comment.commentAuthor}</p>
+                <p>댓글 내용: ${comment.comment}</p> <!-- commentText에서 comment로 수정 -->
+                <p>작성자: ${comment.author}</p> <!-- commentAuthor에서 author로 수정 -->
             </li>
         </c:forEach>
     </ul>

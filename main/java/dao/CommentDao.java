@@ -23,7 +23,7 @@ public class CommentDao {
 	
 	public ArrayList<CommentVO> selectCommentsByPostId(int post_mno) {
 	    ArrayList<CommentVO> commentList = new ArrayList<CommentVO>();
-	    sql = "SELECT * FROM comment_tbl WHERE post_mno = ?"; // SQL 문 수정
+	    sql = "SELECT * FROM comment_tbl WHERE post_mno = ?"; 
 	    try {
 	        con = pool.getConnection();
 	        pstmt = con.prepareStatement(sql);

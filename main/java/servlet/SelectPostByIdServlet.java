@@ -28,6 +28,7 @@ public class SelectPostByIdServlet extends HttpServlet {
 		
 		CommentDao commentDao = new CommentDao();
 		List<CommentVO> comments = commentDao.selectCommentsByPostId(post_Mno);
+	
 		request.setAttribute("comments", comments);
 		
 		request.getRequestDispatcher("postDetail.jsp").forward(request, response);	
